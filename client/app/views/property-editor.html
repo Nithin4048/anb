@@ -1,0 +1,44 @@
+<div class="container-fluid" id="property-editor-panel">
+    <center>
+        <h2><b>{{companyName}}</b></h2>
+        <h4><b>{{heading}}</b></h4>
+    </center>
+    <div class="row">
+        <div class="col-lg-6">
+            <form class="form-horizontal">
+                <div ng-repeat="comp in metaData track by $index">
+                    <div ng-if="comp.component == appConst.COMPONENT.TEXTBOX" class="form-group">
+                        <label for="comp.label" class="col-sm-2 control-label">{{comp.label}}</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" ng-model="comp.value" />
+                        </div>
+                    </div>
+                    <div ng-if="comp.component == appConst.COMPONENT.NUMBER_ONLY_TEXTBOX" class="form-group">
+                        <label for="comp.label" class="col-sm-2 control-label">{{comp.label}}</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" ng-model="comp.value" min="1" />
+                        </div>
+                    </div>
+                    <div ng-if="comp.component == appConst.COMPONENT.CHECKBOX" class="form-group">
+                        <label for="comp.label" class="col-sm-2 control-label">{{comp.label}}</label>
+                        <div class="col-sm-10">
+                            <input type="checkbox" ng-model="comp.value"/>
+                        </div>
+                    </div>
+                    <div ng-if="comp.component == appConst.COMPONENT.SELECT" class="form-group">
+                        <label for="comp.label" class="col-sm-2 control-label">{{comp.label}}</label>
+                        <div class="col-sm-10">
+                            <select class="form-control"
+                                ng-model="comp.value"
+                                ng-options="option as option.name for option in comp.options">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <pre>{{metaData | json}}</pre>
+        </div>
+    </div>
+</div>

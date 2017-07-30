@@ -1,12 +1,18 @@
-# contactApp
+# anbApp
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
-## Build & development
+## To run this app, execute the following commands one by one
 
-Run `grunt` for building and `grunt serve` for preview.
+npm install -g grunt-cli bower
 
-## Testing
+npm install
 
-Running `grunt test` will run the unit tests with karma.
+bower install
+
+grunt
+
+grunt server
+
+

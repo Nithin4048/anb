@@ -1,0 +1,4 @@
+#property-editor-panel pre {
+    overflow-y: auto;
+    max-height: 400px;
+}

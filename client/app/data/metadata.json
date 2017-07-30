@@ -1,0 +1,47 @@
+[
+    {
+        "component":"textbox",
+        "type":"string",
+        "label":"Name",
+        "value":""
+    },
+    {
+        "component":"number_only_textbox",
+        "type":"number",
+        "label":"Age",
+        "value":null
+    },
+    {
+        "component":"checkbox",
+        "type":"boolean",
+        "label":"Have Passport",
+        "value":false
+    },
+    {
+        "component":"select",
+        "label":"Country",
+        "options":[
+            {
+                "id":1,
+                "name":"India"
+            },
+            {
+                "id":2,
+                "name":"Australia"
+            },
+            {
+                "id":3,
+                "name":"UK"
+            },
+            {
+                "id":4,
+                "name":"USA"
+            },
+            {
+                "id":5,
+                "name":"New Zealand"
+            }
+        ],
+        "value":null
+    }
+]
